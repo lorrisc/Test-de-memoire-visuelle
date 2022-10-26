@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*https://coolors.co/3d5a80-98c1d9-e0fbfc-ee6c4d-293241*/
+body {
+    background-color: #2a87d0;
+    transition: all 0.1s ease-in;
+}
+.redApparition {
+    background-color: rgb(255, 152, 152);
+}
+.blueApparition {
+    background-color: rgb(24, 170, 24);
+}
+header {
+    height: 65px;
+}
+footer {
+    bottom: 0px;
+    height: 30px;
+}
+footer,
+header {
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #ffffff;
+    color: black;
+}
+
+/**REGLE DU JEU -- REGLE DU JEU -- REGLE DU JEU*/
+.invisible {
+    display: none;
+}
+#gameSection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    height: 60vh;
+    width: 27vw;
+    text-align: justify;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#gameSection button {
+    padding: 15px 90px;
+    font-size: 1.2em;
+    margin: 60px;
+    background-color: #ee6c4d;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+#gameSection button:hover {
+    background-color: #bd5e4a;
+}
+
+/**GAME SECTION -- GAME SECTION -- GAME SECTION*/
+#infoGames {
+    width: 450px;
+    height: 95px;
+    margin-bottom: 35px;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-size: 1.65em;
+    font-weight: 600;
+    font-family: Helvetica, Arial, sans-serif;
+    color: rgb(165, 203, 234);
+    background: #2a87d0;
+    border-radius: 20px;
+}
+#infoGames span {
+    margin-left: 10px;
+}
+#infoGames__vies {
+    display: flex;
+    align-items: center;
+}
+#infoGames__vie__representation img {
+    width: 35px;
+    margin-right: 4px;
+}
+#infoGames__vie__representation {
+    display: flex;
+}
+#infoGames__level__var {
+    color: white;
+}
+
+#gameSection__tuilesGrid {
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: #2a87d0;
+}
+.visibleGameSection {
+    display: flex;
+}
+#gameSection__tuilesGrid .tuile {
+    border-radius: 10px;
+    transition: transform 0.3s ease-out 0s;
+}
+.tuile__normal {
+    background-color: #2573c1;
+}
+.tuile__error {
+    background-color: #144369;
+    animation: 0.3s ease-out 0s 1 normal none running errorAnimation;
+}
+.tuile__blanche {
+    background-color: #ffffff;
+    transform: rotateX(180deg) translateZ(1px);
+}
+
+/**MUTE SONG -- MUTE SONG -- MUTE SONG*/
+#muteSong {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+}
+.test1 {
+    display: none;
+}
+#muteSong i {
+    color: rgb(165, 203, 234);
+    cursor: pointer;
+}
+#muteSong i:hover {
+    color: white;
+}
+
+@keyframes errorAnimation {
+    0% {
+        transform: translateX(3px);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-3px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

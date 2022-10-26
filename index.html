@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test de mémoire visuelle</title>
+        <link rel="stylesheet" href="style.css" />
+
+        <!--fontawesome-->
+        <script src="https://kit.fontawesome.com/facfbfe3cd.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Test de mémoire visuelle</h1>
+        </header>
+
+        <section id="gameSection">
+            <button id="startGame">Jouer</button>
+
+            <!--*PARTIE JEU -- PARTIE JEU-->
+            <section id="infoGames" class="invisible">
+                <p id="infoGames__level">Level <span id="infoGames__level__var"></span></p>
+                <p id="infoGames__vies">
+                    Vies
+                    <span id="infoGames__vie__representation">
+                        <img id="live3" src="assets/icons/redHeart.png" />
+                        <img id="live2" src="assets/icons/redHeart.png" />
+                        <img id="live1" src="assets/icons/redHeart.png" />
+                    </span>
+                </p>
+            </section>
+            <section id="gameSection__tuilesGrid" class="invisible"></section>
+        </section>
+        <section id="muteSong" class="invisible">
+            <i id="songIsActive" class="fa-solid fa-volume-high fa-2xl"></i>
+            <i id="songIsMute" class="fa-solid fa-volume-xmark fa-2xl"></i>
+        </section>
+
+        <footer>
+            <p>Developed by Lorris | inspired by humanbenchmark.com</p>
+        </footer>
+
+        <script src="gammeMusic.js"></script>
+        <script src="compose.js"></script>
+        <script src="mainVisualMemory.js"></script>
+    </body>
+</html>
